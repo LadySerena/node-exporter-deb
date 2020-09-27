@@ -1,0 +1,11 @@
+steps:
+  - name: gcr.io/cloud-builders/gradle
+    entrypoint: bash
+    args:
+      - "./gradlew"
+      - "build"
+  - name: bash
+    args:
+      - 'ls'
+      - '-alh'
+      - './build/distributions'
